@@ -1,0 +1,28 @@
+.TH NFSSNIF 1 2007-02-02
+.SH NAME
+chname - run command or intereactive shell with a new system hostname
+
+.SH SYNOPSIS
+.B chname
+.I hostname
+.B [
+.I command ...
+.B ]
+
+.SH DESCRIPTION
+Create a new utsname namespace with a new system hostname
+and execute \fIcommand\fP. This is particularly useful for creating
+a chroot that has a hostname independent of the rest of the system.
+
+This capability requires Linux 2.6.19 or later with CONFIG_UTS_NS=y.
+
+.SH EXAMPLE
+.B chname
+.I newname
+.B chroot
+.I /chroot/dir /bin/bash
+
+.SH AUTHOR
+Written by Michael Marineau.
+
+http://code.google.com/p/chname/
