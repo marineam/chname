@@ -1,0 +1,1 @@
+This is a very trivial program that runs a command with a new system hostname. This requires utsname namespace support in Linux 2.6.19 or later.
