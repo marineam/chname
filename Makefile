@@ -1,9 +1,9 @@
-CFLAGS:=-Wall
+CFLAGS += -Wall
 
 all: chname
 
 chname: chname.c
-	$(CC) $(CFLAGS) -o chname chname.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o chname chname.c
 
 clean:
 	$(RM) chname
